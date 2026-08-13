@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>YouTube Video Editor (2010)</title>
+  <link rel="stylesheet" href="editor.css">
+</head>
+<body>
+
+  <!-- Top Header Navigation -->
+  <header class="yt-header">
+    <div class="header-left">
+      <a href="index.html" class="logo">
+        <span class="logo-red">YouTube</span>
+        <span class="testtube-badge">TestTube</span>
+      </a>
+      <span class="editor-title">Video Editor</span>
+    </div>
+    <div class="header-right">
+      <input type="text" id="project-title" value="Untitled Project" class="project-input">
+      <button class="publish-btn" id="publish-btn">Publish...</button>
+    </div>
+  </header>
+
+  <!-- Main Workstation Layout -->
+  <div class="editor-container">
+    
+    <!-- Top Left: Video Preview Window -->
+    <section class="preview-panel">
+      <div class="preview-header">Preview</div>
+      <div class="preview-screen">
+        <video id="preview-player" controls poster="https://picsum.photos/400/225?blur">
+          <source src="https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/ForBiggerBlazes.mp4" type="video/mp4">
+        </video>
+      </div>
+    </section>
+
+    <!-- Top Right: Media & Asset Picker -->
+    <section class="media-panel">
+      <div class="media-tabs">
+        <button class="tab-btn active" data-tab="videos">🎥 My Videos</button>
+        <button class="tab-btn" data-tab="audio">🎵 AudioSwap</button>
+        <button class="tab-btn" data-tab="transitions">🔀 Transitions</button>
+      </div>
+
+      <!-- Tab Content 1: Video Assets -->
+      <div class="tab-content active" id="tab-videos">
+        <div class="media-grid" id="video-pool">
+          <!-- Populated by JS -->
+        </div>
+      </div>
+
+      <!-- Tab Content 2: AudioSwap -->
+      <div class="tab-content" id="tab-audio">
+        <ul class="audio-list" id="audio-pool">
+          <!-- Populated by JS -->
+        </ul>
+      </div>
+
+      <!-- Tab Content 3: Transitions -->
+      <div class="tab-content" id="tab-transitions">
+        <div class="transition-grid">
+          <div class="trans-item" draggable="true" data-type="Crossfade">
+            <div class="trans-icon">⧉</div>
+            <span>Crossfade</span>
+          </div>
+          <div class="trans-item" draggable="true" data-type="Wipe">
+            <div class="trans-icon">◧</div>
+            <span>Wipe</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </div>
+
+  <!-- Bottom Workspace: Timeline Area -->
+  <section class="timeline-container">
+    <div class="timeline-header">
+      <span>Project Timeline</span>
+      <span class="timeline-hint">Drag clips and audio below to assemble your video</span>
+    </div>
+
+    <div class="timeline-tracks">
+      
+      <!-- Video Track -->
+      <div class="track-label">Video</div>
+      <div class="track-dropzone" id="video-track">
+        <div class="drop-placeholder">Drag video clips here</div>
+      </div>
+
+      <!-- Audio Track -->
+      <div class="track-label">Audio</div>
+      <div class="track-dropzone" id="audio-track">
+        <div class="drop-placeholder">Drag royalty-free audio here</div>
+      </div>
+
+    </div>
+  </section>
+
+  <script src="editor.js"></script>
+</body>
+</html>
