@@ -1,0 +1,364 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: Roboto, Arial, sans-serif;
+}
+
+body {
+  background-color: #f1f1f1;
+  color: #333;
+  font-size: 13px;
+}
+
+/* Classic Header */
+.yt-header {
+  height: 50px;
+  background: #fff;
+  border-bottom: 1px solid #e8e8e8;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 30px;
+}
+
+.logo-red {
+  background-color: #e52d27;
+  color: #fff;
+  padding: 2px 6px;
+  border-radius: 2px;
+  font-weight: bold;
+  font-size: 18px;
+}
+
+.country-code {
+  font-size: 10px;
+  color: #666;
+  vertical-align: super;
+}
+
+.search-input {
+  width: 400px;
+  height: 28px;
+  padding: 3px 6px;
+  border: 1px solid #ccc;
+  font-size: 14px;
+}
+
+.search-btn {
+  height: 28px;
+  padding: 0 12px;
+  border: 1px solid #d3d3d3;
+  background: #f8f8f8;
+  cursor: pointer;
+}
+
+/* Main Layout Setup */
+.watch-container {
+  max-width: 1280px;
+  margin: 20px auto;
+  display: flex;
+  gap: 20px;
+  padding: 0 15px;
+}
+
+.primary-content {
+  flex: 1;
+  max-width: 854px;
+}
+
+.secondary-content {
+  width: 350px;
+}
+
+/* Video Player */
+.player-wrapper {
+  width: 100%;
+  aspect-ratio: 16/9;
+  background-color: #000;
+}
+
+.player-wrapper video {
+  width: 100%;
+  height: 100%;
+}
+
+/* Title & View Count Box */
+.watch-header {
+  background: #fff;
+  padding: 15px 15px 5px 15px;
+  border-left: 1px solid #e8e8e8;
+  border-right: 1px solid #e8e8e8;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+}
+
+.video-title {
+  font-size: 18px;
+  font-weight: normal;
+  color: #222;
+}
+
+.view-count {
+  font-size: 19px;
+  color: #666;
+  font-weight: 300;
+}
+
+/* Action & Sentiment Rating Bar */
+.action-bar {
+  background: #fff;
+  border: 1px solid #e8e8e8;
+  padding: 10px 15px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-top: 1px solid #f1f1f1;
+}
+
+.action-btn {
+  background: none;
+  border: none;
+  font-size: 12px;
+  font-weight: bold;
+  color: #666;
+  margin-right: 15px;
+  cursor: pointer;
+}
+
+.action-btn.active-tab {
+  color: #cc181e;
+  border-bottom: 2px solid #cc181e;
+  padding-bottom: 8px;
+}
+
+/* Rating Controls */
+.rating-container {
+  width: 160px;
+}
+
+.rating-buttons {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 4px;
+}
+
+.like-btn, .dislike-btn {
+  background: none;
+  border: none;
+  cursor: pointer;
+  color: #666;
+  font-size: 12px;
+}
+
+.like-btn:hover, .dislike-btn:hover {
+  color: #333;
+}
+
+.sentiment-bar {
+  height: 2px;
+  background-color: #cccccc;
+  width: 100%;
+}
+
+.like-fill {
+  height: 100%;
+  background-color: #167ac6; /* Standard 2015 like bar blue color */
+}
+
+/* Channel Header */
+.channel-card {
+  background: #fff;
+  border: 1px solid #e8e8e8;
+  margin-top: 10px;
+  padding: 15px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.channel-info {
+  display: flex;
+  gap: 12px;
+  align-items: center;
+}
+
+.channel-avatar {
+  border-radius: 50%;
+  width: 48px;
+  height: 48px;
+}
+
+.channel-name {
+  color: #333;
+  font-weight: bold;
+  text-decoration: none;
+  display: block;
+}
+
+.pub-date {
+  color: #767676;
+  font-size: 11px;
+}
+
+.subscribe-btn {
+  background-color: #e52d27;
+  color: #fff;
+  border: 1px solid #b8120c;
+  padding: 6px 10px;
+  font-weight: bold;
+  cursor: pointer;
+  border-radius: 2px;
+}
+
+/* Description Block */
+.video-description {
+  background: #fff;
+  border: 1px solid #e8e8e8;
+  border-top: none;
+  padding: 15px;
+  font-size: 12px;
+  line-height: 1.4;
+  color: #333;
+}
+
+.show-more-btn {
+  background: none;
+  border: none;
+  color: #767676;
+  font-weight: bold;
+  font-size: 11px;
+  margin-top: 10px;
+  cursor: pointer;
+}
+
+/* Comments Section Styling */
+.comments-section {
+  background: #fff;
+  border: 1px solid #e8e8e8;
+  margin-top: 10px;
+  padding: 15px;
+}
+
+.comments-section h3 {
+  font-size: 13px;
+  color: #333;
+  margin-bottom: 15px;
+}
+
+.add-comment-box {
+  display: flex;
+  gap: 12px;
+  margin-bottom: 25px;
+}
+
+.user-avatar {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+}
+
+.comment-input-wrapper {
+  flex-grow: 1;
+}
+
+.comment-input-wrapper input {
+  width: 100%;
+  border: none;
+  border-bottom: 1px solid #ccc;
+  padding: 6px 0;
+  outline: none;
+  font-size: 13px;
+}
+
+.comment-input-wrapper input:focus {
+  border-bottom: 2px solid #167ac6;
+}
+
+.comment-actions {
+  display: flex;
+  justify-content: flex-end;
+  gap: 10px;
+  margin-top: 8px;
+}
+
+.cancel-btn {
+  background: none;
+  border: none;
+  color: #666;
+  cursor: pointer;
+}
+
+.submit-btn {
+  background: #167ac6;
+  color: white;
+  border: none;
+  padding: 6px 12px;
+  font-weight: bold;
+  cursor: pointer;
+  border-radius: 2px;
+}
+
+.comment-item {
+  display: flex;
+  gap: 12px;
+  margin-bottom: 15px;
+}
+
+.comment-author {
+  font-weight: bold;
+  color: #333;
+  margin-right: 8px;
+  text-decoration: none;
+}
+
+.comment-time {
+  color: #767676;
+  font-size: 11px;
+}
+
+.comment-text {
+  margin-top: 4px;
+  color: #333;
+  font-size: 13px;
+}
+
+/* Sidebar Styling */
+.autoplay-toggle {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 10px;
+  font-size: 12px;
+}
+
+.sidebar-card {
+  display: flex;
+  gap: 8px;
+  margin-bottom: 10px;
+}
+
+.sidebar-thumb {
+  width: 120px;
+  height: 68px;
+  object-fit: cover;
+}
+
+.sidebar-info {
+  display: flex;
+  flex-direction: column;
+}
+
+.sidebar-title {
+  color: #0066c0;
+  text-decoration: none;
+  font-weight: bold;
+  font-size: 12px;
+  line-height: 1.2;
+}
+
+.sidebar-meta {
+  color: #767676;
+  font-size: 11px;
+  margin-top: 3px;
+}
