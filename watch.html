@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Classic Video - YouTube (2015)</title>
+  <link rel="stylesheet" href="watch.css">
+</head>
+<body>
+
+  <!-- Minimal Header Bar -->
+  <header class="yt-header">
+    <div class="header-left">
+      <a href="index.html" class="logo">
+        <span class="logo-red">YouTube</span>
+        <span class="country-code">US</span>
+      </a>
+    </div>
+    <div class="header-center">
+      <input type="text" placeholder="Search" class="search-input">
+      <button class="search-btn">🔍</button>
+    </div>
+  </header>
+
+  <!-- Watch Page Container -->
+  <div class="watch-container">
+    
+    <!-- Primary Content Area -->
+    <main class="primary-content">
+      
+      <!-- HTML5 Video Player Container -->
+      <div class="player-wrapper">
+        <video controls poster="https://picsum.photos/800/450">
+          <source src="https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/BigBuckBunny.mp4" type="video/mp4">
+          Your browser does not support HTML5 video.
+        </video>
+      </div>
+
+      <!-- Main Video Title Box -->
+      <div class="watch-header">
+        <h1 class="video-title">Big Buck Bunny (Official HD Trailer)</h1>
+        <div class="view-count">1,245,892 views</div>
+      </div>
+
+      <!-- Video Action & Ratings Bar -->
+      <div class="action-bar">
+        <div class="left-actions">
+          <button class="action-btn active-tab">About</button>
+          <button class="action-btn">Share</button>
+          <button class="action-btn">Add to</button>
+          <button class="action-btn">...</button>
+        </div>
+
+        <!-- Classic Like/Dislike Mechanism -->
+        <div class="rating-container">
+          <div class="rating-buttons">
+            <button class="like-btn" id="like-btn">
+              👍 <span id="like-count">14,230</span>
+            </button>
+            <button class="dislike-btn" id="dislike-btn">
+              👎 <span id="dislike-count">412</span>
+            </button>
+          </div>
+          <!-- Visual Like/Dislike Proportion Bar -->
+          <div class="sentiment-bar">
+            <div class="like-fill" id="sentiment-fill" style="width: 97.1%;"></div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Channel Details Card -->
+      <div class="channel-card">
+        <div class="channel-info">
+          <img src="https://picsum.photos/48/48" alt="Channel Avatar" class="channel-avatar">
+          <div class="channel-meta">
+            <a href="#" class="channel-name">Blender Foundation</a>
+            <span class="pub-date">Published on May 15, 2015</span>
+          </div>
+        </div>
+        <button class="subscribe-btn">
+          <span class="sub-icon">▶</span> Subscribe <span class="sub-count">128K</span>
+        </button>
+      </div>
+
+      <!-- Video Description Box -->
+      <div class="video-description">
+        <p>Big Buck Bunny is a short animated film by the Blender Institute, part of the Blender Foundation. Created using open-source software!</p>
+        <button class="show-more-btn">SHOW MORE</button>
+      </div>
+
+      <!-- Comments Section -->
+      <section class="comments-section">
+        <h3>COMMENTS • <span class="comment-count">1,042</span></h3>
+
+        <!-- Add Comment Input Box -->
+        <div class="add-comment-box">
+          <img src="https://picsum.photos/40/40" alt="User Avatar" class="user-avatar">
+          <div class="comment-input-wrapper">
+            <input type="text" placeholder="Add a public comment..." id="comment-input">
+            <div class="comment-actions">
+              <button class="cancel-btn">Cancel</button>
+              <button class="submit-btn" id="post-comment">Comment</button>
+            </div>
+          </div>
+        </div>
+
+        <!-- Comment List Container -->
+        <div class="comment-list" id="comment-list">
+          <!-- Comments dynamically populated by JS -->
+        </div>
+      </section>
+
+    </main>
+
+    <!-- Secondary Content Area (Sidebar Recommendations) -->
+    <aside class="secondary-content">
+      <div class="autoplay-toggle">
+        <label>
+          <strong>Autoplay</strong>
+          <input type="checkbox" checked>
+        </label>
+      </div>
+
+      <div class="sidebar-feed" id="sidebar-feed">
+        <!-- Up next video list dynamically populated by JS -->
+      </div>
+    </aside>
+
+  </div>
+
+  <script src="watch.js"></script>
+</body>
+</html>
